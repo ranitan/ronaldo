@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <center>TOGGLE</center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          $("#toggle").click(function () {
+            $("div").toggle();
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function () {
+          $("#toggle1").click(function () {
+            $("div").toggle();
+          });
+        });
+      </script>
+ 
+</head>
+<body>
+    
+        <button id=toggle>REGISTRATION FORM</button>
+        <div style="background-color: aquamarine;">
+        <forms action="https://www.cgvakindia.com/" method="post">
+            <fieldset>
+                <legend>
+                    TRAINEE DETAILS
+                </legend>
+                <label>Username</label><br>
+                <input type="text" name="uname" required><br>
+                <label>User Email</label><br>
+                <input type="email" name="email" required><br>
+                <label>User Password</label><br>
+                <input type="password" name="password" required><br>
+                <label>Gender</label><br>
+                <input type="radio" id="gender" name="gender" value="Female">Female<br>
+                <input type="radio" id="gender" name="gender" value="Male">Male<br>
+                <label>Address</label><br>
+                <textarea></textarea><br>
+                <label>Select Course</label><br>
+                <select> name="course"
+                    <optgroup label="webui">
+                        <option> css</option>
+                        <option> html</option>
+                    </optgroup>
+                    <optgroup label="database">
+                        <option>sql</option>
+                        <option>oracle</option>
+                    </optgroup>
+                </select>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="submit">
+                <input type="submit" value="register">
+            </fieldset>
+        </forms>
+    </div>
+    
+        
+      <button id=toggle1>LOGIN FORM</button>
+        <div style="background-color: indianred;">
+        <forms action="https://www.cgvakindia.com/" method="post">
+            <fieldset>
+                <legend>
+                    TRAINEE DETAILS
+                </legend>
+                <label>Username</label><br>
+                <input type="text" name="uname" required><br>
+                <label>User Email</label><br>
+                <input type="email" name="email" required><br>
+                <label>User Password</label><br>
+                <input type="password" name="password" required><br>
+                <label>Gender</label><br>
+                <input type="radio" id="gender" name="gender" value="Female">Female<br>
+                <input type="radio" id="gender" name="gender" value="Male">Male<br>
+                <label>Address</label><br>
+                <textarea></textarea><br>
+            </fieldset>
+        </forms>
+    </div>
+        
+    
+</body>
+</html>
