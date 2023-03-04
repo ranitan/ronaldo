@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <center>MULTIANIMATE</center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(10, 199, 20);
+            
+        }
+        #p1{
+         padding: left 500px;;
+        }
+        #ch{
+           margin:20%;
+        padding: 5%;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+          $("#t1").click(function () {
+            $("#ronaldo").animate({
+              left:'200px'
+              });
+           
+
+              $("#ball").animate({
+              left:'+=1000px'
+              },9000)
+              $("body").css({
+           background:'black'  
+
+              
+          
+          });
+         
+            });
+        });
+      </script>
+</head>
+<body>
+   
+    <button id="t1">LETS START</button>
+   <img src="assests\r2-removebg-preview-removebg-preview-removebg-preview.png" width="200px" height="200" style="position: relative;"; id="ronaldo">
+   <img src="assests\b2-removebg-preview-removebg-preview.png"width="70px" height="70" style="position: relative;"; id="ball">
+   <img src="assests\p1-removebg-preview.png" width="300" height="300" style="float: right;", id="goal">
+   <div id="cheer" style="position: fixed;float: left;">
+   <img src="assests\ch.gif" width="200" height="200" id="ch">
+</div>
+<div id="girl" style="margin-left:250px;margin-top:50px;position: fixed;">
+    <img src="assests\ch.gif" width="200" height="200" id="ra">
+ </div>
+ <div id="player" style="margin-left:450px;margin-top:50px;">
+    <img src="assests/ch.gif" width="200" height="200" id="ni">
+ </div>
+ <div id="boy" style="margin-left:750;margin-top:50px;">
+    <img src="assests/ch.gif" width="200" height="200" id="ta">
+ </div>
+   
+</body>
+</html>
