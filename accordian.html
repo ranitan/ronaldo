@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/hot-sneaks/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+
+
+    <script>
+        $(document).ready(function(){
+             $("#tab1").accordion({
+                collapsible:true
+            });
+        });
+
+        $(document).ready(function(){
+             $("#tab2").accordion({
+                collapsible:true
+            });
+        });
+
+
+        $(document).ready(function(){
+            $("#append").click(function(){
+                $("#mobile").append("<img src=assests/mob2.jfif height=200px width=200px> " );
+            });
+        });
+
+        $(document).ready(function(){
+            $("#prepend").click(function(){
+                $("#laptop").prepend(" <img src=assests/lap1.jfif height=200px width=200px> " );
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    <div id="tab1">
+        <h1> MOBILE  </h1>
+        <p id="mobile">
+            <img src="assests/mob1.jfif" height="200px" width="200px">
+            <img src="assests/mob2.jfif" height="200px" width="200px">
+            
+        </p>
+    </div>
+
+    <div id="tab2">
+        <h1> LAPTOP </h1>
+        <p id="laptop">
+            <img src="assests/lap1.jfif" height="200px" width="200px">
+            <img src="assests/lap2.jfif" height="200px" width="200px">
+            
+        </p>
+    </div>
+
+    <button id="append"> APPEND </button>
+   <button id="prepend">  PREPEND </button>
+    
+</body>
+</html>
