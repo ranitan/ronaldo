@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Tabs - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <title>jQuery task2</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/sunny/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -136,10 +136,11 @@
 
     /*css for tab*/
     #tabs {
-      margin-top: -250px;
+      margin-top: -165px;
       width: 70%;
       position: absolute;
       margin-left: 250px;
+    
     }
 
     /*css for subscribe button*/
@@ -163,11 +164,11 @@
     }
 
     #menu {
-      height: 280px;
+      height: 200px;
     }
 
     li {
-      padding: 10px;
+      padding: 16px;
     }
   </style>
 </head>
@@ -177,11 +178,11 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img id="logo" src="gif/my logo2.png"
+            <img id="logo" src="assests/logo.jfif"
                class="d-inline-block align-text-top">
         </a>
         <div id="dialog" title="Basic dialog">
-            <div class="col-12">
+            <div class="col-15">
                 <label>E-mail<span class="text-danger">*</span></label>
                 <div class="input-group">
                     <input type="E-mail" class="form-control" placeholder="Enter Username">
@@ -196,78 +197,64 @@
 </nav>
   
 <!--vertical menu-->
-  <div id="vermenu" style="margin-top: 50px;">
+  <div id="vermenu" style="margin-top: 60px;">
     <ul id="menu">
-      <h3 style="text-align: center;color: brown;background-color: bisque;">Vertical Menu</h3>
-      <h3 style="text-align: center;color: brown;background-color: bisque;">Anime Series</h3>
+      <h3 style="text-align: center;color: brown;background-color: bisque;">VEHICLES</h3>
       <li>
-        <div>Onepiece</div>
-      </li>
-      <li>
-        <div>Demon Slayer</div>
-      </li>
-      <li>
-        <div>Naruto</div>
+        <div>cars</div>
         <ul>
           <li>
-            <div>Naruto Shippuden</div>
+            <div>car1</div>
           </li>
           <li>
-            <div>Naruto war arc</div>
+            <div>car2</div>
+          </li>
+          <li>
+            <div>car3</div>
           </li>
         </ul>
       </li>
       <li>
-        <div>Blue Lock</div>
-      </li>
-      <li>
-        <div>Hunter x Hunter</div>
+        <div>bikes</div>
         <ul>
           <li>
-            <div>Season 1</div>
-            <ul>
-              <li>
-                <div>Exam arc</div>
-              </li>
-              <li>
-                <div>Heavens Arena arc</div>
-              </li>
-            </ul>
+            <div>bike1</div>
           </li>
           <li>
-            <div>Season 2</div>
-            <ul>
-              <li>
-                <div>Phantom Troupe arc</div>
-              </li>
-              <li>
-                <div> Greed Island arc</div>
-              </li>
-              <li>
-                <div>Chimera Ant arc</div>
-              </li>
-            </ul>
+            <div>bike2</div>
           </li>
           <li>
-            <div>Season 3</div>
+            <div>bike3</div>
           </li>
         </ul>
       </li>
-    </ul>
-  </div>
-
+      <li>
+        <div>scootys</div>
+        <ul>
+          <li>
+            <div>scooty1</div>
+          </li>
+          <li>
+            <div>scooty2</div>
+          </li>
+          <li>
+            <div>scooty3</div>
+          </li>
+        </ul>
+      </li>
+      
   <!--tabs-->
   <div id="tabs">
-    <ul>
-      <li><a href="#tabs1">CARS</a></li>
-      <li><a href="#tabs2">Zoro</a></li>
-      <li><a href="#tabs3">Tanjiro</a></li>
+    <ul style="position: absolute;">
+      <li><a  href="#tabs1">CARS</a></li>
+      <li><a href="#tabs2">BIKES</a></li>
+      <li><a href="#tabs3">SCOOTYS</a></li>
     </ul>
     <div id="tabs1">
-      <p><strong> Images</strong></p>
-      <img src="\assests\car1.jpg" style="width: 200px;height: 200px;">
-      <img src="\assests\car2.jfif" style="width: 200px;height: 200px;">
-      <img src="\assests\car3.jfif" style="width: 200px;height: 200px;">
+      <p><strong> IMAGES</strong></p>
+      <img src="assests/car1.jpg" style="width: 200px;height: 200px;">
+      <img src="assests/car2.jfif" style="width: 200px;height: 200px;">
+      <img src="assests/car3.jfif" style="width: 200px;height: 200px;">
       <div class="dialog" title="Image Download">
         <div class="progress-label">Processing...</div>
         <div class="progressbar"></div>
@@ -275,10 +262,10 @@
       <button class="download">Download</button>
     </div>
     <div id="tabs2">
-      <p><strong> Images</strong></p>
-      <img src="gif/zoro1.jpg" style="width: 200px;height: 200px;">
-      <img src="gif/zoro2.jpg" style="width: 200px;height: 200px;">
-      <img src="gif/zoro3.jpg" style="width: 200px;height: 200px;">
+      <p><strong> IMAGES</strong></p>
+      <img src="assests/bike1.jfif" style="width: 200px;height: 200px;">
+      <img src="assests/bike2.jfif" style="width: 200px;height: 200px;">
+      <img src="assests/bike3.jfif" style="width: 200px;height: 200px;">
       <div class="dialog" title="Image Download">
         <div class="progress-label">Processing...</div>
         <div class="progressbar"></div>
@@ -287,10 +274,10 @@
     </div>
     
     <div id="tabs3">
-      <p><strong> Images</strong></p>
-      <img src="gif/tanjiro1.jpg" style="width: 200px;height: 200px;">
-      <img src="gif/tanjiro2.jpg" style="width: 200px;height: 200px;">
-      <img src="gif/tanjiro3.jpg" style="width: 200px;height: 200px;">
+      <p><strong> IMAGES</strong></p>
+      <img src="assests/scooty1.jfif" style="width: 200px;height: 200px;">
+      <img src="assests/scooty2.jfif" style="width: 200px;height: 200px;">
+      <img src="assests/scooty3.jfif" style="width: 200px;height: 200px;">
       <div class="dialog" title="Image Download">
         <div class="progress-label">Processing...</div>
         <div class="progressbar"></div>
