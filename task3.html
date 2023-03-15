@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Validate Demo</title>
+    <!-- SRC attribute can be changed according to your preference or location of JS file -->
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <style type="text/css">
+        /* Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        label {
+            padding: 11px 12px 11px 2px;
+            display: inline-block;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        input[type=mobile],
+        textarea {
+            border: 2px solid #ccc;
+            resize: vertical;
+            padding: 12px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        form {
+            padding: 20px;
+            background-color:yellowgreen;
+            color:rgb(8, 97, 97);
+            border-radius: 4px;
+        }
+
+        /* Set a style for the submit button */
+        .registerbtn {
+            background-color:rgb(8, 97, 97);
+            color:white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-style: groove;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .row {
+            margin-top:10px;
+            width: 100%;
+        }
+
+        form .error {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" id="MyForm" method="get" action="" name="MyForm">
+            <fieldset>
+                <legend>Registration Form</legend>
+                <div class="row">
+                    <label for="uname">User Name</label>
+                    <input id="uname" name="uname" type="text">
+                </div>
+                <div class="row">
+                    <label for="pwd">Password</label>
+                    <input type="password" name="pwd" id="Pwd">
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email">
+                </div>
+                
+                <div class="row">
+                    <label for="mobile">Mobile</label>
+                    <textarea id="mobile" placeholder="999-999-9999" name="mobile" >
+                </div>
+                <div class="row">
+                    <textarea class="registerbtn" type="submit" value="Register">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#MyForm").validate({
+                rules: {
+                    'uname': {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 10,
+                        pattern:/^[a-z][A-Z][.' ']$/,
+                    
+                    },
+                    'pwd': {
+                        required: true,
+                        minlength:8,
+                        maxlength:16,
+                        pattern:/^[A-Z][a-z][0-9][@$#]$/,
+
+                    },
+                    'email': {
+                        required: true,
+                        email: true,
+                    },
+                    'mobile': {
+                        required: true,
+                        pattern:/^([0-9]{3})\-([0-9]{3})\-([0-9]{4})$/,
+                    },
+                },
+                messages: {
+                    'uname': "Please enter your Name in proper format.",
+                    'pwd': "Please enter a Password in given format.",
+                    'email': "Please enter Email in proper format.",
+                    'mobile': "Please enter mobile number in proper format.",
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
