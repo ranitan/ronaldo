@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>JQuery Validate Demo</title>
+    <meta charset="utf-8" />
+    <title>jquery task-3</title>
     <!-- SRC attribute can be changed according to your preference or location of JS file -->
     <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
@@ -18,10 +18,10 @@
             display: inline-block;
         }
 
-        input[type=text],
-        input[type=email],
-        input[type=password],
-        input[type=mobile],
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="mobile"],
         textarea {
             border: 2px solid #ccc;
             resize: vertical;
@@ -38,15 +38,15 @@
 
         form {
             padding: 20px;
-            background-color:yellowgreen;
-            color:rgb(8, 97, 97);
+            background-color: yellowgreen;
+            color: rgb(8, 97, 97);
             border-radius: 4px;
         }
 
         /* Set a style for the submit button */
         .registerbtn {
-            background-color:rgb(8, 97, 97);
-            color:white;
+            background-color: rgb(8, 97, 97);
+            color: white;
             padding: 10px 20px;
             margin: 10px 0;
             border-style: groove;
@@ -56,7 +56,7 @@
         }
 
         .row {
-            margin-top:10px;
+            margin-top: 10px;
             width: 100%;
         }
 
@@ -73,23 +73,23 @@
                 <legend>Registration Form</legend>
                 <div class="row">
                     <label for="uname">User Name</label>
-                    <input id="uname" name="uname" type="text">
+                    <textarea id="uname" placeholder="enter your name" name="uname" type="text"></textarea>
                 </div>
                 <div class="row">
                     <label for="pwd">Password</label>
-                    <input type="password" name="pwd" id="Pwd">
+                    <textarea type="password" placeholder="enter password" name="pwd" id="Pwd"></textarea>
                 </div>
                 <div class="row">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email">
+                    <textarea id="email" placeholder="xxxxx@xxxxx.xxx" type="email" name="email"></textarea>
                 </div>
-                
+
                 <div class="row">
                     <label for="mobile">Mobile</label>
-                    <textarea id="mobile" placeholder="999-999-9999" name="mobile" >
+                    <textarea id="mobile" placeholder="999-999-9999" name="mobile"></textarea>
                 </div>
                 <div class="row">
-                    <textarea class="registerbtn" type="submit" value="Register">
+                    <input class="registerbtn" type="submit" value="Register" />
                 </div>
             </fieldset>
         </form>
@@ -98,35 +98,33 @@
         $(document).ready(function () {
             $("#MyForm").validate({
                 rules: {
-                    'uname': {
+                    uname: {
                         required: true,
                         minlength: 5,
                         maxlength: 10,
-                        pattern:/^[a-z][A-Z][.' ']$/,
-                    
+                        pattern: /^([a-z][A-Z])$/,
                     },
-                    'pwd': {
+                    pwd: {
                         required: true,
-                        minlength:8,
-                        maxlength:16,
-                        pattern:/^[A-Z][a-z][0-9][@$#]$/,
-
+                        minlength: 8,
+                        maxlength: 16,
+                        pattern: /^([A-Z][a-z][0-9][@$#])$/,
                     },
-                    'email': {
+                    email: {
                         required: true,
                         email: true,
                     },
-                    'mobile': {
+                    mobile: {
                         required: true,
-                        pattern:/^([0-9]{3})\-([0-9]{3})\-([0-9]{4})$/,
+                        pattern: /^([0-9]{3})\-([0-9]{3})\-([0-9]{4})$/,
                     },
                 },
                 messages: {
-                    'uname': "Please enter your Name in proper format.",
-                    'pwd': "Please enter a Password in given format.",
-                    'email': "Please enter Email in proper format.",
-                    'mobile': "Please enter mobile number in proper format.",
-                }
+                    uname: "Please enter your Name in proper format.",
+                    pwd: "Please enter a Password in given format.",
+                    email: "Please enter Email in proper format.",
+                    mobile: "Please enter mobile number in proper format.",
+                },
             });
         });
     </script>
